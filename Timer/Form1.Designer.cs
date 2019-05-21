@@ -32,7 +32,7 @@
             this.txtNum = new System.Windows.Forms.TextBox();
             this.btnCount = new System.Windows.Forms.Button();
             this.txtCountDown = new System.Windows.Forms.TextBox();
-            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.Timer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // txtNum
@@ -51,6 +51,7 @@
             this.btnCount.TabIndex = 1;
             this.btnCount.Text = "카운트다운";
             this.btnCount.UseVisualStyleBackColor = true;
+            this.btnCount.Click += new System.EventHandler(this.BtnCount_Click);
             // 
             // txtCountDown
             // 
@@ -62,15 +63,16 @@
             this.txtCountDown.TabIndex = 2;
             this.txtCountDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // timer
+            // Timer
             // 
-            this.timer.Interval = 1000;
+            this.Timer.Interval = 1000;
+            this.Timer.Tick += new System.EventHandler(this.Timer_Tick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(166, 175);
+            this.ClientSize = new System.Drawing.Size(166, 190);
             this.Controls.Add(this.txtCountDown);
             this.Controls.Add(this.btnCount);
             this.Controls.Add(this.txtNum);
@@ -88,7 +90,7 @@
         private System.Windows.Forms.TextBox txtNum;
         private System.Windows.Forms.Button btnCount;
         private System.Windows.Forms.TextBox txtCountDown;
-        private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Timer Timer;
     }
 }
 
